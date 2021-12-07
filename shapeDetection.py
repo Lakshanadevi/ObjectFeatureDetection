@@ -47,7 +47,7 @@ class shapeDetector():
             # putting shape name at center of each shape
             if len(approx) == 3:
                 cv2.putText(self.img, 'Triangle', (x, y),
-                            cv2.FONT_HERSHEY_SIMPLEX, 0.6, (255, 255, 255), 2)
+                            cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 0, 0), 2)
 
             elif len(approx) == 4:
                 (x1, y1, w, h) = cv2.boundingRect(approx)
@@ -55,21 +55,21 @@ class shapeDetector():
                 # aspect ratio of square is approximately 1
                 if ar >= 0.95 and ar <= 1.05:
                     cv2.putText(self.img, 'Square', (x, y),
-                            cv2.FONT_HERSHEY_SIMPLEX, 0.8, (255, 255, 255), 2)
+                            cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 0, 0), 2)
                 else:
                     cv2.putText(self.img, 'Rectangle', (x, y),
-                            cv2.FONT_HERSHEY_SIMPLEX, 0.6, (255, 255, 255), 2)
+                            cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 0, 0), 2)
 
             elif len(approx) == 5:
                 cv2.putText(self.img, 'Pentagon', (x, y),
-                            cv2.FONT_HERSHEY_SIMPLEX, 0.6, (255, 255, 255), 2)
+                            cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 0, 0), 2)
 
             elif len(approx) == 6:
                 cv2.putText(self.img, 'Hexagon', (x, y),
-                            cv2.FONT_HERSHEY_SIMPLEX, 0.6, (255, 255, 255), 2)
+                            cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 0, 0), 2)
 
             else:
                 cv2.putText(self.img, 'circle', (x, y),
-                            cv2.FONT_HERSHEY_SIMPLEX, 0.6, (255, 255, 255), 2)
+                            cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 0, 0), 2)
                 
         return self.img
