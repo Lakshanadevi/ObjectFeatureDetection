@@ -9,8 +9,8 @@ import numpy as np
 from matplotlib import pyplot as plt
 import sys
 
-from colorDetection.py import colorDetector
-from shapeDetection.py import shapeDetector
+from colorDetection import colorDetector
+from shapeDetection import shapeDetector
 
 def main(img_path):
     img = cv2.imread(img_path) #Read image
