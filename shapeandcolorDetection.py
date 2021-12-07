@@ -26,6 +26,7 @@ def main(img_path):
     shape_detector1.preprocess_image()
     img_shape = shape_detector1.identify_shape()
     
+    '''
     #Create a plot using matplotlib
     fig = plt.figure(figsize=(10, 7))
     rows = 1
@@ -42,6 +43,10 @@ def main(img_path):
     plt.imshow(img_shape_rgb)
     plt.axis('off')
     plt.title("Shape Detection")
+    '''
+    cv2.imshow('Shape & Color', img_shape)  
+    cv2.waitKey(0)
+    cv2.destroyAllWindows()
 
 
 if __name__ == "__main__":
