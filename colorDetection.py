@@ -29,7 +29,7 @@ class colorDetector:
         self.red_mask = cv2.inRange(img_hsv, red_lower_range, red_upper_range)
         
         green_lower_range = np.array([45,52,72])
-        green_upper_range = np.array([102,255,255])
+        green_upper_range = np.array([93,255,255])
         self.green_mask = cv2.inRange(img_hsv, green_lower_range, green_upper_range)
         
         yellow_lower_range = np.array([22,93,0])
